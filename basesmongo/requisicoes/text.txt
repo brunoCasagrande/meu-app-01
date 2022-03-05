@@ -1,0 +1,14 @@
+ db.TipoRequisicoes.insertOne( {"id":"34", "descricao":"Teste1"} );
+ db.TipoRequisicoes.insertOne( {"id":"35", "descricao":"Teste2"} );
+ db.TipoRequisicoes.insertOne( {"id":"36", "descricao":"Teste3"} );
+
+ db.Colaborador.insertOne( {"id":"23","nome":"Jaqson", "email":"dalbosco@Upf.br", "senha":"123"} );
+ db.Colaborador.insertOne( {"id":"24","nome":"Bruno", "email":"bruno@Upf.br", "senha":"1234"} );
+ db.Colaborador.insertOne( {"id":"25","nome":"Maria", "email":"maria@Upf.br", "senha":"12345"} );
+ db.TipoRequisicoes.find();
+ db.Colaborador.find();
+
+
+ db.createUser( {user: "admin",pwd: "admin",roles: [ { role: "userAdminAnyDatabase", db: "admin" },{ role: "dbAdminAnyDatabase", db: "admin" },{ role: "readWriteAnyDatabase", db: "admin" } ] }
+  );
+  mongo -u "admin" -p "admin" --authenticationDatabase "requisicoes" --port 27017

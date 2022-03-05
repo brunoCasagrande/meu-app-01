@@ -1,0 +1,1 @@
+"C:\Program Files\MongoDB\Server\5.0\bin\mongod" --port 27018 --dbpath "C:\UPF 2022.1\sexta - Topicos Especiais em Desenvolvimento de Sistemas I\Mongo\basesmongo\requisicoes" --auth
