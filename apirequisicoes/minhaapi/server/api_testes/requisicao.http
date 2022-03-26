@@ -1,0 +1,33 @@
+# Obter a lista de usuários
+GET http://localhost:3000/api/requisicao
+Content-Type: application/json
+###
+
+# Inserir novo usuário
+POST http://localhost:3000/api/requisicao
+Content-Type: application/json
+
+{
+    "titulo": "Teste",
+    "descricao": "Mais um teste",
+    "dataEHoraCriada": "25-02-2020",  
+    "status": "Mais um teste",
+    "prazoDeAtendimento": "25-02-2020",  
+
+}
+###
+
+# Excluir um usuário
+DELETE http://localhost:3000/api/requisicao/623e5ea3163fb10a9ba62797
+Content-Type: application/json
+###
+
+# Obter pelo id de usuário
+GET http://localhost:3000/api/requisicao/id
+Content-Type: application/json
+###
+
+# Obter usuários filtrando
+GET http://localhost:3000/api/requisicao/filtro/bruno
+Content-Type: application/json
+###

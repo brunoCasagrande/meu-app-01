@@ -1,5 +1,4 @@
 console.log("Arquivo server.js executou com sucesso!");
-console.log("Arquivo server.js executou com sucesso! de novo");
 
 const express = require('express');
 const app = express();
@@ -23,5 +22,10 @@ MongoClient.connect(uri, (err, client) => {
 app.get('/', (req, res) => {
     res.send('Atendida a requisição GET!!');
 }); 
+    
+//rotas para animais
+const animais = require ('./animais');
+animais(app);
 
 
+   

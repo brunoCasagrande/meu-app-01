@@ -1,0 +1,1 @@
+mongo -u "admin" -p "admin" --authenticationDatabase "baserequisicoes02" port 27019

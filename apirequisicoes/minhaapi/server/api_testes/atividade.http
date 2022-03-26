@@ -1,0 +1,34 @@
+# Obter a lista de usuários
+GET http://localhost:3000/api/atividade
+Content-Type: application/json
+###
+
+# Inserir novo usuário
+POST http://localhost:3000/api/atividade
+Content-Type: application/json
+
+{
+    "titulo": "Teste",
+    "descricao": "Mais um teste",
+    "status": "Mais um teste",
+    "prazo": "25-02-2020",
+    "agendaInicio": "25-02-2020",
+    "dataDeHoraTermino": "25-02-2020",  
+
+}
+###
+
+# Excluir um usuário
+DELETE http://localhost:3000/api/atividade/623e5ea3163fb10a9ba62797
+Content-Type: application/json
+###
+
+# Obter pelo id de usuário
+GET http://localhost:3000/api/atividade/id
+Content-Type: application/json
+###
+
+# Obter usuários filtrando
+GET http://localhost:3000/api/atividade/filtro/bruno
+Content-Type: application/json
+###

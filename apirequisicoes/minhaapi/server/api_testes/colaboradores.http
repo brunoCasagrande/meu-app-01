@@ -1,0 +1,31 @@
+# Obter a lista de usuários
+GET http://localhost:3000/api/colaboradores
+Content-Type: application/json
+###
+
+# Inserir novo usuário
+POST http://localhost:3000/api/colaboradores
+Content-Type: application/json
+
+{
+    "nome": "Bruno Casagrande", 
+    "email": "brunocasagransde38@gmail.com",
+    "celular": "99999-9999",
+    "senha": "1234"
+}
+###
+
+# Excluir um usuário
+DELETE http://localhost:3000/api/colaboradores/623e5ea3163fb10a9ba62797
+Content-Type: application/json
+###
+
+# Obter pelo id de usuário
+GET http://localhost:3000/api/colaboradores/id
+Content-Type: application/json
+###
+
+# Obter usuários filtrando
+GET http://localhost:3000/api/colaboradores/filtro/bruno
+Content-Type: application/json
+###
