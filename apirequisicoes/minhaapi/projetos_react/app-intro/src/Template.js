@@ -1,11 +1,16 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 
-function Usuarios(){
-    return(
-        <div>
-            
-        </div>
-    );
+function Template() {
+  // Declare variáveis de state
+  
+
+  return (
+    <div>
+     
+
+      
+    </div>
+  );
 }
 
-export default Usuarios;
+export default Template;

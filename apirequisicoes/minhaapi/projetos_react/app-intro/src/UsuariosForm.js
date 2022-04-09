@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 
-function UsuariosForm() {
-
-    const UsuarioForm = (props) => {
-        const handleInputChange = (event) => {
-            const { name, value } = event.target
-            props.setUsuario({ ...props.usuario, [name]: value })
-        }
+function UsuariosForm(props) {
+    // Declare variáveis de state
+    const handleInputChange = (event) => {
+        const { name, value } = event.target
+        props.setUsuario({ ...props.usuario, [name]: value })
     }
+
     return (
         <div>
             <form>
@@ -27,12 +26,13 @@ function UsuariosForm() {
                         value={props.usuario.celular} onChange={handleInputChange} />
                 </div>
                 <div class="form-group">
-                    <button type="button" onClick={props.salvar}
+                    <button type="button" onClick={props.onClickSalvar}
                         className="btn btn-primary btn-sm">Salvar</button>
-                    <button type="button" onClick={props.cancelar}
+                    <button type="button" onClick={props.onClickCancelar}
                         className="btn btn-primary btn-sm">Cancelar</button>
                 </div>
             </form>
+
 
         </div>
     );
