@@ -1,6 +1,6 @@
 @apiUrl = http://localhost:3000/api
 //{{apiUrl}}
-
+@authToken = "TOKEN"
 # Obter a lista de colaboradores
 GET {{apiUrl}}/colaboradores
 Content-Type: application/json

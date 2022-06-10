@@ -62,8 +62,9 @@ const ColaboradorForm = (props) => {
 
             <div className="field col-4 md:col-4">
               <label htmlFor="senha">Senha</label>
-              <Password id="senha" 
+              <InputText type = {'password'} id="senha" 
                 {...register("senha", { 
+                  
                 })}     
                 defaultValue={senha} 
                 onChange={e => setSenha(e.target.value)} />
