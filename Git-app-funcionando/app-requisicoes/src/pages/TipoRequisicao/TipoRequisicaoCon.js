@@ -12,9 +12,9 @@ import { ConfirmDialog, confirmDialog } from "primereact/confirmdialog";
 
 
 function TipoRequisicaoCon() {
-  const [tipoRequisicoes, setTipoRequisicaoes] = useState([]);
-  const initialState = { id: null, observacao: ""};
-  const [tipoRequisicoa, setTipoRequisicao] = useState(initialState);
+  const [tipoRequisicoes, setTipoRequisicoes] = useState([]);
+  const initialState = { id: null, descricao: ""};
+  const [tipoRequisicao, setTipoRequisicao] = useState(initialState);
   const [editando, setEditando] = useState(false);
   const toastRef = useRef();
 
@@ -24,7 +24,7 @@ function TipoRequisicaoCon() {
 
   const onClickAtualizar = () => {
     TipoRequisicaoSrv.listar().then((response) => {
-        setTipoRequisicaoes(response.data);
+        setTipoRequisicoes(response.data);
         toastRef.current.show({
           severity: "success",
           summary: "TipoRequisicaoes Atualizados!",
@@ -47,8 +47,8 @@ function TipoRequisicaoCon() {
   };
 
   const salvar = () => {
-    if (tipoRequisicoa._id == null) { // inclusão
-      TipoRequisicaoSrv.incluir(tipoRequisicoa)
+    if (tipoRequisicao._id == null) { // inclusão
+      TipoRequisicaoSrv.incluir(tipoRequisicao)
         .then((response) => {
           setEditando(false);
           onClickAtualizar();
@@ -66,7 +66,7 @@ function TipoRequisicaoCon() {
           });
         });
     } else { // alteração
-      TipoRequisicaoSrv.alterar(tipoRequisicoa)
+      TipoRequisicaoSrv.alterar(tipoRequisicao)
         .then((response) => {
           setEditando(false);
           onClickAtualizar();
@@ -92,7 +92,7 @@ function TipoRequisicaoCon() {
 
   const editar = (id) => {
     setTipoRequisicao(
-      tipoRequisicoes.filter((tipoRequisicoa) => tipoRequisicoa._id == id)[0]
+      tipoRequisicoes.filter((tipoRequisicao) => tipoRequisicao._id == id)[0]
     );
     setEditando(true);
   };
@@ -136,7 +136,7 @@ function TipoRequisicaoCon() {
         <TipoRequisicaoList
           tipoRequisicoes={tipoRequisicoes}
           onClickAtualizar={onClickAtualizar}
-          tipoRequisicoa={tipoRequisicoa}
+          tipoRequisicao={tipoRequisicao}
           setTipoRequisicao={setTipoRequisicao}
           inserir={inserir}
           editar={editar}
@@ -149,7 +149,7 @@ function TipoRequisicaoCon() {
     return (
       <div>
         <TipoRequisicaoForm
-          tipoRequisicoa={tipoRequisicoa}
+          tipoRequisicao={tipoRequisicao}
           setTipoRequisicao={setTipoRequisicao}
           salvar={salvar}
           cancelar={cancelar}

@@ -5,6 +5,15 @@
 GET {{apiUrl}}/colaboradores
 Content-Type: application/json
 ###
+# Autenticação de usuário 
+POST {{apiUrl}}/login
+Content-Type: application/json
+ 
+{
+    "email": "bruno@b",
+    "senha": "12345678"
+}
+###
 
 # Inserir novo colaborador
 POST {{apiUrl}}/colaboradores

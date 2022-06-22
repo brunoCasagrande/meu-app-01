@@ -11,6 +11,14 @@ function Menu() {
       command: () => { navigate("/") }
     },
     {
+      label: 'Andamento', icon: 'pi pi-id-card',
+      command: () => { navigate("/andamento") }
+    },
+    {
+      label: 'Atividades', icon: 'pi pi-id-card',
+      command: () => { navigate("/atividade") }
+    },
+    {
       label: 'Colaboradores', icon: 'pi pi-id-card',
       command: () => { navigate("/colaborador") }
     },
@@ -22,6 +30,15 @@ function Menu() {
       label: 'TipoRequisicoes', icon: 'pi pi-id-card',
       command: () => { navigate("/tipoRequisicoes") }
     },
+    {
+      label: 'Sair', icon: 'pi pi-sign-out',
+      command: () => {
+        sessionStorage.setItem('token',
+          '');
+      },
+      url: '/'
+    },
+
   ];
 
   return (<Menubar model={items} />)

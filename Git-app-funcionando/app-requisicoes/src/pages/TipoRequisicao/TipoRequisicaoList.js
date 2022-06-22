@@ -21,7 +21,7 @@ const TipoRequisicaoList = (props) => {
   }
   return (
     <div className="App">
-      <h4>Listagem de TipoRequisicaoes</h4>
+      <h4>Listagem de Tipo de Requisições</h4>
       <button
         className="btn btn-primary btn-sm"
         onClick={props.onClickAtualizar}
@@ -41,7 +41,8 @@ const TipoRequisicaoList = (props) => {
           onSelectionChange={e => props.setTipoRequisicao(e.value)} dataKey="_id"
           >
 
-          <Column header="Observações" body={operacoesBodyTemplate}></Column>
+          <Column field="descricao" header="Descrição" sortable filter ></Column>
+          <Column header="Operações" body={operacoesBodyTemplate}></Column>
         </DataTable>
         {/* */}
     
